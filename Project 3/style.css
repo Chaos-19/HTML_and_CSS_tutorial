@@ -1,0 +1,66 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+.nav-bar {
+  border: 2px solid ;
+  height: 130px ;
+  padding: 0;
+}
+/*.list{
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px ;
+}
+.list li{
+  padding: 10px ;
+  
+}
+.list li:first-child{
+  border: 2px solid ;
+  position: absolute;
+  margin: 15px ;
+  left:2%;
+  display: block
+}
+.list li a{
+  font-size: 20px ;
+}*/
+
+.list{
+list-style-type: none;
+
+}
+.list li{
+  float: right;
+  padding: 10px ;
+}
+.list li:first-child{
+  border: 2px solid ;
+  float: left;
+}
+.list li:first-child a{
+font-size: 35px ;
+}
+.list li a{
+  display: inline;
+  font-size: 30px ;
+}
+.card-wrapper{
+  border: 2px solid ;
+  margin:280px auto;
+  width:40%;
+  padding: 20px ;
+  transition: all 0.5s
+}
+.card{
+  text-align: center;
+  padding: 20px ;
+}
+.card-wrapper:hover{
+  box-shadow: 13px 5px 0px 1px rgba(131, 131, 131, 0.5) /*rgba(0, 0,0, 0.5)*/
+}
