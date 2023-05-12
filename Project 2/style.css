@@ -1,0 +1,32 @@
+*{
+  box-sizing: border-box;
+}
+.nav-bar{
+  background-color: pink;
+}
+.nav-bar ul{
+  list-style-type:none ;
+  display: flex;
+  justify-content: center;
+}
+ul li{
+  padding: 15px ;
+}
+li a{
+  text-decoration: none;
+  font-size: 25px ;
+}
+.content{
+  padding: 0 100px ;
+  margin: 5px ;
+}
+img{
+  width: 100%;
+  object-fit: contain;
+}
+.foot{
+  text-align: center;
+  height: 60px ;
+  padding: 4px ;
+  background-color: slateblue;
+}

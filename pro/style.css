@@ -1,0 +1,62 @@
+.container {
+  position: relative;
+
+}
+
+@-webkit-keyframes bounce {
+  from {
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+  }
+  to{
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes bounce2 {
+  from {
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+  }
+  to{
+    top: 100px;
+    left: 100px;
+    z-index: 1;
+    transform: rotate(90deg);
+  }
+}
+
+
+.item {
+  width: 150px;
+  height: 150px;
+}
+
+.item {
+  position: absolute;
+}
+
+.item1 {
+  background: rgba(234, 8, 8, 1);
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  animation: bounce 1s ease infinite;
+}
+
+.item2 {
+  background: rgba(23, 132, 51, 1);
+  top: 100px;
+  left: 100px;
+  z-index: 1;
+  animation: bounce2 1s ease infinite;
+}
+
+.item3 {
+  background: rgba(0, 0, 0, 1);
+}
