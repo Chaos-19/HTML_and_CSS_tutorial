@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background: red;
+      perspective: 100px;
+      transform-style: preserve-3d;
+      transition: width 2s, height 2s, transform 2s;
+    }
+
+    div:hover {
+      width: 300px;
+      height: 300px;
+      transform: rotateY(360deg);
+      transform: perspective(200px);
+      transform: perspective(200px) rotateY(100deg);
+      
+    }
+
+    @keyframes radial-pulse {
+      0% {
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+      }
+
+      100% {
+        box-shadow: 0 0 0 30px rgba(0, 0, 0, 0);
+      }
+    }
+
+    .div {
+      margin: 3em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      color: white;
+      font-weight: bold;
+      font-family: Arial;
+      background: rgba(0, 0, 255, 0.75);
+      border-radius: 50%;
+      animation: radial-pulse 1s infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+  </div>
+  <div class="div">A</div>
+</body>
+
+</html>

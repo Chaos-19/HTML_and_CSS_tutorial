@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    .toolip{
+      position: relative;
+      display: inline-block;
+    }
+    .txt{
+      visibility: hidden;
+      position: absolute;
+      left:10px ;
+      top: 20px;
+      background: black;
+      color: white;
+      padding: 5px ;
+      width: 120px ;
+      text-align: center;
+      border-radius :5px ;
+      z-index: -1;
+      
+    }
+    .toolip:hover .txt{
+     /* display: block;*/
+     visibility: visible;
+    }
+    
+    /*  draw the arrow   */
+    .toolip .txt::after {
+    content:" ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+    
+  </style>
+</head>
+
+<body>
+  <div >
+    
+<div class="toolip">Toolip example
+  <span class="txt"><b>toolip text </b></span></div>
+  </div>
+</body>
+
+</html>

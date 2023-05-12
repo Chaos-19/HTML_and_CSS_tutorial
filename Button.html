@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+  
+  
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #F4511E;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;  
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+  
+  
+  
+
+.my span::after{
+  display: none;
+  content: "  >>"
+  transition 1s;
+}
+.my span{
+  position: relative;
+  transition: 1s;
+}
+.my span:hover{
+  display: block;
+}
+  
+    .my{
+      font-size: 30px ;
+      padding: 14px 25px ; 
+      text-align: center;
+      background: white;
+      color: #000;
+      font-weight: normal;
+      border: 2px solid #4CAF50;
+      transition: background 0.4s;
+      border-radius: 5px ;
+    }
+    .my:hover, span::after{
+      background: #4CAF50;
+      color: white;
+     /* box-shadow: 0 4px 6px 0 gray,0 6px 8px 1px black;*/
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 1px rgba(0,0,0,0.19);
+    }
+  </style>
+</head>
+
+<body>
+<button class="my"><span>Button</span></button>
+
+<h2>Animated Button</h2>
+
+<button class="button" style="vertical-align:middle"><span>Hover </span></button>
+</body>
+
+</html>

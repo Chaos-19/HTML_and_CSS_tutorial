@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    * {
+      box-sizing: border-box;
+      filter: br
+    }
+
+    @-webkit-keyframes rotat {
+      0% {transform: rotate(0deg)}
+      20% {transform: rotate(70deg)}
+      40% {transform: rotate(140deg)}
+      60% {transform: rotate(210deg)}
+      80% {transform: rotate(280deg) }
+      100% {transform: rotate(350deg)} 
+      0% {transform: rotate(0deg)}
+    }
+
+
+
+    .circle {
+      display: flex;
+      justify-content: center;
+      width: 270px;
+      height: 270px;
+      background-color: #4751C2;
+      margin: auto;
+      border-radius: 200px;
+      border: 10px solid #287070;
+    }
+
+    .hour,
+    .second,
+    .mint {
+      position: absolute;
+      background-color: red;
+      width: 10px;
+      height: 60px;
+      left: 50%;
+      top: 5%;
+    }
+
+    .mint {
+      top: 18%;
+      left: 49%;
+      -webkit-transform-origin: top;
+      -webkit-animation-name: rotat;
+      -webkit-animation-duration: 120s;
+      -webkit-animation-iteration-count: infinite;
+      border-bottom-right-radius:25px ;
+      border-bottom-left-radius: 25px ;
+    }
+
+    .second {
+      /*transform: rotate(90deg);*/
+      background-color: #31FF00;
+      top: 11%;
+      left: 49%;
+      height: 58px;
+      -webkit-animation-name: rotat;
+      -webkit-animation-duration: 60s;
+      -webkit-animation-delay: 2s;
+      -webkit-transform-origin: bottom;
+      -webkit-animation-iteration-count:infinite ;
+      border-top-right-radius:25px ;
+      border-top-left-radius: 25px ;
+
+    }
+
+    .hour {
+      height: 78px;
+      top: 8%;
+      left: 49%;
+      -webkit-animation-name: rotat;
+      -webkit-animation-duration: 240s;
+      -webkit-transform-origin: bottom;
+      -webkit-animation-iteration-count:infinite ;
+      border-top-right-radius:25px ;
+      border-top-left-radius: 25px ;
+    }
+    .cent{
+      position: absolute;
+      width: 30px ;
+      height: 30px ;
+      background-color: #B24C0C;
+      top: 16%;
+      left: 47%;
+      border-radius: 100%;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="outer">
+    <div class="circle">
+      <div class="hour"></div>
+      <div class="second"></div>
+      <div class="mint"></div>
+      <div class="cent"></div>
+    </div>
+  </div>
+</body>
+
+</html>

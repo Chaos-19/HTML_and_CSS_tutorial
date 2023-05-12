@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border: 2px solid;
+      float: left;
+      width: 25%;
+      height: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+
+    li {
+      text-align: center;
+    }
+
+    li a {
+      display: block;
+      text-decoration: none;
+      padding: 10px 13px;
+      font-size: 20px;
+    }
+
+    /*li a:hover{
+  background: #4CAF50;
+  color: white;
+}*/
+    li a:hover:not(.active) {
+      background-color: #FB0404;
+    }
+
+    li a.active {
+      background-color: #4CAF50;
+    }
+
+    button {
+      width: 70px;
+      height: 30px;
+      margin-top: 15px;
+      font-size: 25px;
+    }
+
+    button:activ {
+      box-shadow: 4px 2px 8px 0 #585555;
+      transition: width 1s;
+    }
+
+    .content {
+      float: right;
+      width: 75%;
+    }
+
+
+    /*
+    .container {
+      position: relative;
+      display: inline-block;
+
+    }
+
+    .list {
+      position: absolute;
+      bottom: 0;
+      display: none;
+    }
+
+    .list a {
+      display: block;
+    }
+
+    .container:hover .list {
+      display: block;
+    }*/
+  </style>
+</head>
+
+<body>
+
+  <ul id="list">
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+
+  <div id="cont" class="content" style="padding:1px 16px;height:1000px;">
+    <button onclick="draw()">🚪</button>
+    <h2>Fixed Full-height Side Nav</h2>
+    <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
+    <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
+    <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <video width="250" src="/images/Theming_CSS_variables_(CSS_custom_properties)(0).mp4" type="video/mp4" autoplay controls></video>
+    <!-- <source src="/images/Theming_CSS_variables_(CSS_custom_properties)(0).mp4" type="video/mp4">
+      <source src="mov_bbb.ogg" type="video/ogg">
+      Your browser does not support HTML5 video.*/
+    </video>-->
+    
+    <div class="container">
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+      <div class="item item4">4</div>
+      <div class="item item5">5</div>
+      <div class="item item6">6</div>
+      <div class="item item7">7</div>
+      <div class="item item8">8</div>
+      <div class="item item9">9</div>
+      <div class="item item10">10</div>
+    </div>
+    
+    <div class="container">
+      <button class="item item1">1</button>
+      <button class="item item2">2</button>
+      <button class="item item3">3</button>
+      <button class="item item4">4</button>
+      <button class="item item5">5</button>
+      <button class="item item6">6</button>
+      <button class="item item7">7</button>
+      <button class="item item8">8</button>
+      <button class="item item9">9</button>
+      <button class="item item10">10</button>
+    </div>
+    
+  </div>
+  <script>
+  var isOpen=false;
+  
+    function draw() {
+      
+      if(!isOpen){
+      document.getElementById("list").style.display = "none";
+      document.getElementById("cont").style.width = "100%";
+     /* document.getElementById("list").style.transform = "none";*/
+      document.getElementById("cont").style.transition= "width 0.3s";
+     isOpen=true;
+      }else{
+        document.getElementById("list").style.display = "block";
+      document.getElementById("cont").style.width = "75%";
+     /* document.getElementById("list").style.transform = "none";*/
+      document.getElementById("cont").style.transition= "width 0.6s";
+     isOpen=false; 
+      }
+    }
+  </script>
+</body>
+
+</html>

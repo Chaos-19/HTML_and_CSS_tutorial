@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    body {
+      counter-reset: section;
+    }
+
+    h1::before {
+      counter-increment: section;
+      content: "Section  " counter(section) " ";
+
+    }
+    ol{
+      counter-reset: section;
+      list-style-type: none ;
+    }
+    li::before {
+      counter-increment: section ;
+      content: "item  " counter(section) "  "
+    }
+    
+  </style>
+</head>
+
+<body>
+  <h1>HTML</h1>
+  <h1>Css</h1>
+  <h1>Javascript</h1>
+  <h1>HTML</h1>
+  <h1>Css</h1>
+  <h1>Javascript</h1>
+  
+  <ol>
+    <li>Java</li>
+    <li>Cpp</li>
+    <ol>
+      <li>Objective c</li>
+      
+    </ol>
+    <li>kotlin</li>
+    <li>C</li>
+    <li>C#</li>
+  </ol>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    input[type="text"],
+    select ,input[type="button"]{
+      display: block;
+      margin: 8px 0;
+      width: 100%;
+      padding: 12px 20px;
+      font-size: 20px ;
+      box-sizing: border-box;
+      transition: all 1s ;
+    }
+
+    div {
+      padding: 40px;
+      border: 2px solid black;
+
+    }
+    input[type="button"]{
+      display: inline-block;
+    }
+
+    form {
+      padding: auto;
+    }
+    
+   select:focus, input[type="text"]:focus{
+      box-shadow: 8px 8px 16px #8B00F3;
+      outline: 1px inset #313658;
+      border-radius: 5px ;
+      padding: 10px ;
+      transform: scale(1.1);
+    }
+   
+   label{
+     font-size: 20px ;
+     font-weight: bolder ;
+     color: 
+   } 
+   .search{
+     background-image: url("/images/search_icon_256 (1).png");
+     position: absolute;
+     
+  /*   background-position: 10px 10px ;*/
+   } 
+    @media screen and (min-width: 500px) {
+  div{
+    width: 50%;
+    margin:auto ;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <div>
+    <form action="">
+      <label for="">Firstname</label>
+      <input type="text" name="" id="">
+      <label for="">Lastname</label>
+      <input type="text" name="" id="">
+      <label for="">State</label>
+      
+      <select name="" id="">
+        <option value="">Ethiopia</option>
+        <option value="">Australia</option>
+        <option value="">Canada</option>
+      </select>
+      <input type="button" value="Submit">
+    </form>
+  </div>
+  <input class="search" type="text">
+</body>
+
+</html>
